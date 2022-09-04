@@ -1,0 +1,52 @@
+body
+{
+	background-color: rgb(213, 182, 156);
+}
+.container
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.card
+{
+	box-sizing: border-box;
+	background-color: rgb(186, 155, 116);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px;
+	border-radius: 20px;
+}
+.image
+{
+	height: 200px;
+	border-radius: 10px;
+}
+h1
+{
+	font-size: 20px;
+	text-decoration: underline;
+}
+h2
+{
+	font-size: 24px;
+}
+.text
+{
+	font-size: 18px;
+}
+em
+{
+	color:rgba(69, 42, 11, 0.952)
+}
+strong
+{
+	color: rgb(57, 31, 14);
+	width: 1px;
+}
+.year
+{
+	font-style: italic;
+}
