@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: rgb(197, 197, 240);
+}
+h1
+{
+	background-color: rgb(154, 154, 208);
+	color: rgb(5, 2, 53);
+	padding: 80px;
+	text-align: center;
+	font-size: 40px;
+}
+table
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px;
+	padding-top: 80px;
+}
+td
+{
+	padding: 4px;
+	height: 30px;
+}
+input
+{
+	height: 24px;
+}
+.button_row
+{
+	text-align: center;
+}
+.btn
+{
+	padding: 2px;
+	height: 30px;
+	width: 80px;
+}
+.btn:hover
+{
+	background-color:  rgb(154, 154, 208);
+}
