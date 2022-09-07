@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap</title>
+	<link rel="stylesheet" href="https://e-learning.bmstu.ru/iu6/pluginfile.php/16891/mod_resource/content/1/bootstrap.min.css">
+	<style>
+		.my-primary {
+			background-color: #8d90b9;
+			color: white;
+		}
+		main {
+			margin-top: 15px;
+		}
+		html {
+			position: relative;
+			min-height: 100%;
+		}
+		body {
+			margin-bottom: 40px;
+			background-color: #dbddf9;
+		}
+		p
+		{
+			font-size: 20px;
+		}
+		footer {
+			height: 40px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+		table
+		{
+			margin: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.btn
+		{
+			background-color: #caccea;
+		}
+		.btn:hover
+		{
+			background-color: #8d90b9;
+		}
+		td, th
+		{
+			padding: 10px;
+			text-align: center;
+
+		}
+		.button
+		{
+			text-align: center;
+		}
+		.text
+		{
+			text-align: center;
+		}
+		h1
+		{
+			text-align: center;
+			margin: 30px;
+		}
+		.schedule td, .schedule th
+		{
+			border: 1px solid;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark my-primary">
+			<a class="navbar-brand navbar-fixed-top" href="#">Navbar</a>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home
+					<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<div class = "kitten">
+			<div class="row">
+				<div class="col-4">
+				<img class = "img-thumbnail" src="https://e-learning.bmstu.ru/iu6/pluginfile.php/16893/mod_resource/content/1/avatar.jpeg" alt="avatar" width="150" height="150">
+				</div>
+			</div>
+			<div class="col-8">
+			<p>Kitten</p>
+			</div>
+		</div>
+		<form>
+			<h1>Форма регистрации</h1>
+			<table>
+				<tr>
+					<td><label class = "form-label">Имя:</label></td>
+					<td><input type = "text" placeholder="Иван" class = "form-control"></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label">Фамилия:</label></td>
+					<td><input type = "text" placeholder="Иванов" class = "form-control"></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label">Отчество:</label></td>
+					<td><input type = "text" placeholder="Иванович" class = "form-control"></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label">Номер телефона:</label></td>
+					<td><input type = "tel" class = "form-control" placeholder="+7 (  ) "></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label">Электронная почта:</label></td>
+					<td><input type = "email" class = "form-control" placeholder="name@example.com"></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label" class = "form-control">Пароль:</label></td>
+					<td><input type = "password" class = "form-control"></td>
+				</tr>
+				<tr>
+					<td><label class = "form-label">Пол:</label></td>
+					<td>
+						<input type = "radio" name = "gender"><label label-default>М</label>
+						<input type = "radio" name = "gender"><label label-default>Ж</label>
+					</td>
+				</tr>
+				<tr class = "button">
+					<td colspan="2" >
+						<input type="submit" class = "btn btn-outline-success" value="Отправить" />
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div class="schedule">
+			<h1>Расписание ИУ6-35Б</h1>
+			<table class = "table table-hover">
+				<thead>
+				<tr class = "table-primary">
+					<th scope="col">День недели</th>
+					<th scope="col">Время</th>
+					<th scope="col" class = "numerator">Числитель</th>
+					<th scope="col" class = "denominator">Знаменатель</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td rowspan="7">ПН</td>
+					<td>08:30 - 10:05</td>
+					<td colspan = "2">(сем) Элективный курс по физической культуре и спорту каф. ФВ</td>
+				</tr>
+				<tr>
+					<td>10:15 - 11:50</td>
+					<td colspan = "2">(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+				</tr>
+				<tr>
+					<td>12:00 - 13:35</td>
+					<td colspan = "2">(сем) Иностранный язык каф. Л2</td>
+				</tr>
+				<tr>
+					<td>13:50 - 15:25</td>
+					<td colspan = "2">(сем) Правоведение 619л</td>
+				</tr>
+				<tr><td>15:40 - 17:15</td><td></td><td></td></tr>
+				<tr><td>17:25 - 19:00</td><td></td><td></td></tr>
+				<tr><td>19:10 - 20:45</td><td></td><td></td></tr>
+			</tbody>
+			</table>
+		</div>
+		<div class = "text">
+			<h1>Сергей Есенин</h1>
+			<h2>Ну, целуй меня, целуй…</h2>
+			<p>
+				Увядающая сила!<br/>
+				<em>Умирать так умирать!</em><br/>
+				До кончины губы милой<br/>
+				Я хотел бы целовать.<br/><br/>
+
+				Чтоб все время в синих дремах,<br/>
+				Не стыдясь и не тая,<br/>			
+				В нежном шелесте черемух<br/>
+				Раздавалось: <em>«Я твоя».</em><br/><br/>
+
+				И чтоб свет над полной кружкой<br/>
+				Легкой пеной не погас —<br/>
+				<strong>Пей и пой, моя подружка:<br/>
+				На земле живут лишь раз!</strong><br/><br/>
+			</p>
+		</div>
+	</main>
+	<footer class="my-primary">
+		<div class="container">
+			<p class="footer-text">Footer</p>
+		</div>
+	</footer>
+</body>
+</html>
