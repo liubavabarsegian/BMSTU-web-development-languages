@@ -14,11 +14,12 @@ function writeTree(elem, tabs)
 			if (elem.children[i].localName != undefined) {
 				result.textContent += "        ".repeat(tabs);
 				result.textContent += "<" + elem.children[i].localName + ">" + "\n";
-				console.log(elem.children[i].localName);
+				console.log("<" + elem.children[i].localName + ">" + "\n");
 			}
 			writeTree(elem.children[i], tabs);
 			result.textContent += "        ".repeat(tabs);
 			result.textContent += "</" + elem.children[i].localName + ">" + "\n";
+			console.log("</" + elem.children[i].localName + ">" + "\n");
 			
 		}
 	}
@@ -41,11 +42,11 @@ function returnNodeType(type) {
 
 btn.addEventListener("click", function(){
 	if (show) {
-		result.textContent += "<" + body.localName + ">\n" ;
-		console.log(body.localName);
+		result.textContent += "<" + body.localName + ">\n";
+		console.log("<" + body.localName + ">\n");
 		writeTree(body, tabs);
 		result.textContent += "<" + body.localName + ">\n";
-		console.log(body.localName);
+		console.log("<" + body.localName + ">\n");
 		btn.textContent = "Убрать";
 		show = false;
 	}
