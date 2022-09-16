@@ -23,7 +23,7 @@
 	<main>
 		<div class = "container-fluid">
 		<h1 class = "h1-order">Наше меню:</h1>
-		<table class = "table">
+		<table class = "table" id = "table-menu">
 			<thead class = "table-dark">
 				<tr>
 					<td></td>
@@ -35,17 +35,17 @@
 				<tr>
 					<td><img src = "../images/margarita.jpg" class = "table-img"></td>
 					<td>Маргарита</td>
-					<td>349 руб.</td>
+					<td value = "349">349 руб.</td>
 				</tr>
 				<tr>
 					<td><img src = "../images/peperonni.jpg" class = "table-img"></td>
 					<td>Пеперонни</td>
-					<td>399 руб.</td>
+					<td value = "399">399 руб.</td>
 				</tr>
 				<tr>
 					<td><img src = "../images/cezar.png" class = "table-img"></td>
 					<td>Цезарь</td>
-					<td>489 руб.</td>
+					<td value = "489">489 руб.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -56,8 +56,13 @@
 				<tr></tr>
 			</table>
 		</div>
-		<form>
-			<h1>Для сотрудников:</h1>
+		<h1 class = "h1-order">Для сотрудников:</h1>
+		<form >
+			<div class = "form-row">
+				<input type = "text" class="form-control form-control-lg" placeholder="Название нового товара">
+				<input type = "number" class="form-control form-control-lg" placeholder="0">
+				<button type="submit" class="btn btn-primary">Добавить</button>
+			</div>
 		</form>
 		</div>
 	</main>
@@ -65,5 +70,6 @@
 		<p>3,14</p>
 		<p>lyubahemmo@mail.ru</p>
 	</footer>
+	<script src = "../order.js"></script>
 </body>
 </html>
