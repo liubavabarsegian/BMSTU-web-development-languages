@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Make an order</title>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel = "stylesheet" href = "../pages.css">
 </head>
 <body>
@@ -22,8 +22,9 @@
 	</header>
 	<main>
 		<div class = "container-fluid">
+		<h1 class = "h1-order">Наше меню:</h1>
 		<table class = "table">
-			<thead class = "thead-dark">
+			<thead class = "table-dark">
 				<tr>
 					<td></td>
 					<td>Название</td>
@@ -41,8 +42,23 @@
 					<td>Пеперонни</td>
 					<td>399 руб.</td>
 				</tr>
+				<tr>
+					<td><img src = "../images/cezar.png" class = "table-img"></td>
+					<td>Цезарь</td>
+					<td>489 руб.</td>
+				</tr>
 			</tbody>
 		</table>
+		<h1 class = "h1-order">Корзина:</h1>
+		<div class = "shopping-cart">
+			<p>Корзина пуста:( Вы пока ничего не добавили!</p>
+			<table>
+				<tr></tr>
+			</table>
+		</div>
+		<form>
+			<h1>Для сотрудников:</h1>
+		</form>
 		</div>
 	</main>
 	<footer>
