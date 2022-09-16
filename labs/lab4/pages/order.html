@@ -16,7 +16,6 @@
 				<li><a href = "home.html"><img src = "../images/header.png" alt = "3,14" id = "image-header"></a></li>
 				<li><a href = "home.html" id = "page-name">3,14цца</a></li>
 				<li><a href = "order.html">Сделать заказ</a></li>
-				<li><a href = "contacts.html">Связь с нами</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -31,7 +30,7 @@
 					<td>Цена</td>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id = "tbody-menu">
 				<tr>
 					<td><img src = "../images/margarita.jpg" class = "table-img"></td>
 					<td>Маргарита</td>
@@ -59,9 +58,9 @@
 		<h1 class = "h1-order">Для сотрудников:</h1>
 		<form >
 			<div class = "form-row">
-				<input type = "text" class="form-control form-control-lg" placeholder="Название нового товара">
-				<input type = "number" class="form-control form-control-lg" placeholder="0">
-				<button type="submit" class="btn btn-primary">Добавить</button>
+				<input type = "text" class="form-control form-control-lg name__input"  placeholder="Название нового товара">
+				<input type = "number" class="form-control form-control-lg price__input" placeholder="0">
+				<input type = "button" class="btn btn-primary">Добавить</input>
 			</div>
 		</form>
 		</div>
