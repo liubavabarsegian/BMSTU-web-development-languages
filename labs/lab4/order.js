@@ -11,7 +11,13 @@ countAlready = false;
 btnElement.addEventListener( "click", function(){
 	var goodsName = nameInput.value;
 	var goodsPrice = priceInput.value;
-	addRow(goodsName, goodsPrice);
+	if (goodsName == '' || goodsPrice == '') {
+		alert('Введите все данные!');
+		nameInput.value = "";
+		priceInput.value = "";
+	}
+	else
+		addRow(goodsName, goodsPrice);
 });
 
 function addRow(goodsName, goodsPrice) {
