@@ -4,7 +4,9 @@ btnElement = document.getElementById("add-btn");
 nameInput = document.querySelector(".name__input");
 priceInput = document.querySelector(".price__input");
 tableBasketBackground = document.querySelector(".shopping-cart");
+
 countBasketGoods = 0;
+countAlready = false;
 
 btnElement.addEventListener( "click", function(){
 	var goodsName = nameInput.value;
@@ -66,18 +68,29 @@ function clearBusket() {
     }
 	tableBasketBackground.querySelector("p").textContent = "Корзина пуста:( Вы пока ничего не добавили!";
 	countBasketGoods = 0;
+	tableBasketBackground.querySelectorAll("p")[1].textContent = "";
+	countBasketGoods = 0;
 }
 
 function countTotalCost() {
 	totalSum = 0;
 	var rows = document.getElementById("table-basket").rows;
     for (i = 0; i < rows.length; i++) {
-        var price = rows[i].getAttribute("value");
+        var price = parseInt(rows[i].cells[2].getAttribute("value"));
 		totalSum += price;
     }
-	alert(totalSum);
-	result = tableBasketBackground.createElement("p");
-	result.textContent = "Итого: " + totalSum + " руб."
+	if (countBasketGoods == 0) {
+		
+	}
+	else if (!countAlready) {
+		result = document.createElement("p");
+		tableBasketBackground.appendChild(result);
+		result.textContent = "Итого: " + totalSum + " руб.";
+		countAlready = true;
+	}
+	else {
+		result.textContent = "Итого: " + totalSum + " руб.";
+	}
 }
 
 
