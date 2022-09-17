@@ -34,33 +34,37 @@
 				<tr>
 					<td><img src = "../images/margarita.jpg" class = "table-img"></td>
 					<td>Маргарита</td>
-					<td value = "349">349 руб.</td>
+					<td value = "349" name = "Маргарита">349 руб.</td>
 				</tr>
 				<tr>
 					<td><img src = "../images/peperonni.jpg" class = "table-img"></td>
 					<td>Пеперонни</td>
-					<td value = "399">399 руб.</td>
+					<td value = "399" name = "Пеперонни">399 руб.</td>
 				</tr>
 				<tr>
 					<td><img src = "../images/cezar.png" class = "table-img"></td>
 					<td>Цезарь</td>
-					<td value = "489">489 руб.</td>
+					<td value = "489" name = "Цезарь">489 руб.</td>
 				</tr>
 			</tbody>
 		</table>
 		<h1 class = "h1-order">Корзина:</h1>
 		<div class = "shopping-cart">
 			<p>Корзина пуста:( Вы пока ничего не добавили!</p>
-			<table>
-				<tr></tr>
+			<table id = "table-basket" class = "table">
+				<tbody>
+					
+				</tbody>
 			</table>
+			<input type = "button" value = "Очистить корзину" class = "btn btn-secondary" id = "clear-btn" onclick="clearBusket()">
+			<input type = "button" value = "Рассчитать стоимость заказа" class = "btn btn-primary" id = "count-btn" onclick="countTotalCost()">
 		</div>
 		<h1 class = "h1-order">Для сотрудников:</h1>
 		<form >
 			<div class = "form-row">
 				<input type = "text" class="form-control form-control-lg name__input"  placeholder="Название нового товара">
-				<input type = "number" class="form-control form-control-lg price__input" placeholder="0">
-				<input type = "button" class="btn btn-primary">Добавить</input>
+				<input type = "number" class="form-control form-control-lg price__input" placeholder="0"  onkeyup="if(this.value<0)this.value=1">
+				<input type = "button" class="btn btn-primary" value = "Добавить" id = "add-btn" ></input>
 			</div>
 		</form>
 		</div>
