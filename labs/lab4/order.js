@@ -30,8 +30,8 @@ function addRow(goodsName, goodsPrice) {
 	cell.innerHTML = goodsName;
 	cell = row.insertCell(2);
 	cell.innerHTML = goodsPrice + " руб.";
-	cell.setAttribute("name", goodsName);
-	cell.setAttribute("value", goodsPrice);
+	cell.setAttribute("data-name", goodsName);
+	cell.setAttribute("data-value", goodsPrice);
 
 	nameInput.value = "";
 	priceInput.value = "";
@@ -42,8 +42,8 @@ function rowClick() {
     var rows = document.getElementById("table-menu").rows;
     for (i = 1; i < rows.length; i++) {
         rows[i].onclick = function(){
-			var value = this.cells[2].getAttribute("value");
-			var name = this.cells[2].getAttribute("name");
+			var value = this.cells[2].getAttribute("data-value");
+			var name = this.cells[2].getAttribute("data-name");
 			addToBasket(name, value);
         };
     }
@@ -57,12 +57,14 @@ function addToBasket(name, price) {
 	cell.innerHTML = countBasketGoods;
 	var cell = row.insertCell(1);
 	cell.innerHTML = name;
-	cell.setAttribute("name", name);
+	cell.setAttribute("data-name", name);
 	cell = row.insertCell(2);
-	cell.setAttribute("value", price);
+	cell.setAttribute("data-value", price);
 	cell.innerHTML = price + " руб.";
 
 	tableBasketBackground.querySelector("p").textContent = "";
+	tableBasketBackground.querySelectorAll("p")[1].textContent = "";
+
 }
 
 window.onload = rowClick();
@@ -82,7 +84,7 @@ function countTotalCost() {
 	totalSum = 0;
 	var rows = document.getElementById("table-basket").rows;
     for (i = 0; i < rows.length; i++) {
-        var price = parseInt(rows[i].cells[2].getAttribute("value"));
+        var price = parseInt(rows[i].cells[2].getAttribute("data-value"));
 		totalSum += price;
     }
 	if (countBasketGoods == 0) {
