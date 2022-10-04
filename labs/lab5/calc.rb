@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# module Calculate
 module Calculate
-    def Calc(x)
-        y = Math.sin(x)/(x ** 3 - 5) + (x ** 2) - 2 * Math.exp(x)
-    end
+  def self.calc(input)
+    Math.sin(input) / (input**3 - 5) + (input**2) - 2 * Math.exp(input)
+  end
 end
