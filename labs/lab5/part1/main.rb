@@ -10,7 +10,7 @@ module Main
     print 'Введите x: '
     input = gets.chop
     puts 'Результат вычислений: ' unless Calculate.calc(input).is_a?(String)
-    puts Calculate.calc(input) 
+    puts Calculate.calc(input)
   end
 end
 
