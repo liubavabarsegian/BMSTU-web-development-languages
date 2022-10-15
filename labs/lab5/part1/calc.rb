@@ -3,6 +3,10 @@
 # module Calculate
 module Calculate
   def self.calc(input)
-    Math.sin(input) / (input**3 - 5) + (input**2) - 2 * Math.exp(input)
+    #here
+    return "InputError: expected a numeric input" if input == '' || input.match?(/[^-]\D/)
+
+    @input = input.to_f
+    (Math.sin(@input) / (@input**3 - 5) + (@input**2) - 2 * Math.exp(@input)).round(2)
   end
 end
