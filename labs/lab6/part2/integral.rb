@@ -4,16 +4,27 @@
 module Integral
   @exact_result = (1 - Math.cos(1)) / 2
 
+  def self.h(right, left)
+    (right - left).to_f / @n
+  end
+
+  def self.y(x_value)
+    x_value * Math.sin(x_value**2)
+  end
+
+  def self.sum_n(left, right)
+    @n.times do |k|
+      x = left + (h(right, left) * k) + (h(right, left) / 2)
+      @sum += h(right, left) * y(x)
+      k + 1
+    end
+  end
+
   def self.calc_rects(left, right)
     Enumerator.new do |yielder|
       loop do
-        h = (right - left).to_f / @n
         @sum = 0
-        @n.times do |k|
-          x = left + (h * k) + (h / 2)
-          @sum += h * x * Math.sin(x**2)
-          k + 1
-        end
+        sum_n(left, right)
         yielder << @sum
         @n += 1
       end
@@ -24,7 +35,6 @@ module Integral
     return if epsilon.zero? || left >= right
 
     @n = 1
-    @sum = 0
     calc_rects(left, right).take_while { |sum| (@exact_result - sum).abs > epsilon }
     print_sum(left, right, epsilon)
     @sum
