@@ -26,7 +26,7 @@ module Integral
     puts "Точность epsilon = #{epsilon}"
     puts "Точный результат: #{@exact_result}"
     puts "Полученная сумма с точностью #{epsilon}: #{@sum}"
-    puts "Число итераций (т.е. число прямоугольников n): #{@n}\n\n"
+    puts "Число итераций (т.е. число прямоугольников n): #{@n - 1}\n\n"
   end
 
   def self.integrate(left, right, epsilon)
