@@ -30,8 +30,8 @@ module Main
 
       return -1 if input_salary == -1
 
-      @workers.append(@worker);
-      @salaries.append(@salary.to_i);
+      @workers.append(@worker)
+      @salaries.append(@salary.to_i)
     end
   end
 

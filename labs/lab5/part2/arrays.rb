@@ -7,14 +7,14 @@ module Arrays
   attr_reader :workers
   attr_writer :salaries
 
-  def self.find_av_salary(workers, salaries)
+  def self.find_av_salary(_workers, salaries)
     return if salaries.size.zero?
 
     (salaries.sum.to_f / salaries.size).round(3)
   end
 
   def self.find_richest(workers, salaries)
-    return if salaries.size != workers.size || workers.size.zero? || salaries.size.zero?
+    return if salaries.size != workers.size || workers.size.zero?
 
     @two_richest.append(workers[salaries.index(salaries.max(2)[0]).to_i])
     @two_richest.append(workers[salaries.index(salaries.max(2)[1]).to_i])
@@ -38,11 +38,14 @@ module Arrays
   end
 
   def self.print_richest(workers, salaries)
-    puts "Работники с наибольшей зарплатой: #{find_richest(workers, salaries)[0]} и #{find_richest(workers, salaries)[1]}"
+    puts "Работники с наибольшей зарплатой: #{find_richest(workers,
+                                                           salaries)[0]} и #{find_richest(workers, salaries)[1]}"
   end
 
   def self.print_min_dev(workers, salaries)
-    puts "Работник, зарплата которого наименее отклоняется от средней зарплаты всех работников: #{find_min_deviation(workers, salaries)}"
+    puts "Работник, зарплата которого наименее отклоняется от средней зарплаты всех работников: #{find_min_deviation(
+      workers, salaries
+    )}"
   end
 
   def self.fire_loser(workers, salaries)
