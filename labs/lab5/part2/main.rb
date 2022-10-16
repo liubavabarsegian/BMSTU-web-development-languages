@@ -5,6 +5,9 @@ require_relative 'arrays'
 module Main
   include Arrays
 
+  @workers = []
+  @salaries = []
+
   def self.eol?(input)
     input == ''
   end
@@ -27,19 +30,20 @@ module Main
 
       return -1 if input_salary == -1
 
-      Arrays.add_to_arrays(@worker, @salary.to_i)
+      @workers.append(@worker);
+      @salaries.append(@salary.to_i);
     end
   end
 
   def self.main
-    return if input_data == -1 && Arrays.workers.size.zero?
+    return if input_data == -1 && @workers.size.zero?
 
-    Arrays.print_info
-    Arrays.print_av
-    Arrays.print_richest
-    Arrays.print_min_dev
-    Arrays.fire_loser
-    Arrays.print_info
+    Arrays.print_info(@workers, @salaries)
+    Arrays.print_av(@workers, @salaries)
+    Arrays.print_richest(@workers, @salaries)
+    Arrays.print_min_dev(@workers, @salaries)
+    Arrays.fire_loser(@workers, @salaries)
+    Arrays.print_info(@workers, @salaries)
   end
 end
 
