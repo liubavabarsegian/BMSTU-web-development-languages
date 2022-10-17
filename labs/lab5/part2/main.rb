@@ -15,13 +15,23 @@ module Main
   def self.input_worker
     print "\nДля остановки ввода нажмите Enter\n\nВведите фамилию работника: "
     @worker = gets.chomp
-    return -1 if eol?(@worker) { print "\nКонец ввода.\n" }
+    if eol?(@worker) then
+      print "\nКонец ввода.\n"
+      return -1 
+    end
   end
 
   def self.input_salary
     print "Введите зарплату за текущий месяц работника #{@worker}: "
     @salary = gets.chomp
-    return -1 if eol?(@salary) { print "\nКонец ввода.\n" }
+    if eol?(@salary) then
+      print "\nКонец ввода.\n" 
+      return -1
+    end
+    if !@salary.match?(/^[\.0-9]*$/) then
+      print "\nОшибка ввода.\n"
+      return -1
+    end
   end
 
   def self.input_data
@@ -31,6 +41,10 @@ module Main
       return -1 if input_salary == -1
 
       @workers.append(@worker)
+      @salary = @salary.to_f
+      if @salary.to_f == @salary.to_i then
+        @salary = @salary.to_i
+      end
       @salaries.append(@salary.to_i)
     end
   end
@@ -48,3 +62,7 @@ module Main
 end
 
 Main.main
+
+
+
+  

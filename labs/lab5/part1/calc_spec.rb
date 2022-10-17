@@ -15,11 +15,10 @@ RSpec.describe Calculate do
 
     context 'when parameter is a valid string' do
       it 'contains not numeric characters' do
-        test_strings = ['3e', 'qwe', '12qwe', '3!3']
+        test_strings = ['3e', 'qwe', '12qwe', '3!3', '-3e', '-', ' ', '']
         test_strings.each do |test_string|
           expect(Calculate.calc(test_string)).to eq('InputError: expected a numeric input')
         end
-        # expect(Calculate.calc(test_string)).to eq("InputError: expected a numeric input")
       end
 
       it 'is numeric' do
