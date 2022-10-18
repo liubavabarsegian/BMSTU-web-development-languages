@@ -3,7 +3,6 @@
 # module Calculate
 module Calculate
   def self.calc(input)
-    # here
     return 'InputError: expected a numeric input' if input == '' || !input.match?(/^-?[0-9]\d*(\.\d+)?$/)
 
     @input = input.to_f
