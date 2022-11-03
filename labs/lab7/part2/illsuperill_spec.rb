@@ -14,7 +14,9 @@ end
 RSpec.describe SuperIll do
   context 'checking the parent of SuperIll' do
     it 'returns Ill' do
-      expect(SuperIll.superclass).to eq Ill
+      super_ill = SuperIll.new
+      expect(super_ill.class.superclass).to eq Ill
+      expect(super_ill.class.ancestors.include?('Ill'))
     end
   end
 end
